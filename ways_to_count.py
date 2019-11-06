@@ -9,6 +9,7 @@ t = text.split()
 c = Counter(t)
 # get unique words
 c.keys()
+c.most_common(10)
 
 fd = nltk.FreqDist(t)
 # unique words
@@ -17,6 +18,7 @@ fd.keys()
 fd.plot()
 # get words that occur at least a certain number of times
 more_than_once = [(f, c) for f, c in fd.items() if c > 1]
+fd.most_common(10)
 
 # this method is more useful for multiple documents
 vec = CV()
